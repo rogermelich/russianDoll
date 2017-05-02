@@ -5,12 +5,12 @@ namespace App;
 
 class Matriuska
 {
-    public static function setUP()
+    public static function setUP($model)
     {
-        return "hola";
+
     }
 
-    public static function tearDown()
+    public static function tearDown($model)
     {
         return "adeu";
     }
