@@ -8,4 +8,5 @@
             @include ('cards/_card') 
         @endforeach
     </div>
+
 @stop
