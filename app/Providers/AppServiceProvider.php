@@ -17,12 +17,12 @@ class AppServiceProvider extends ServiceProvider
     {
         // Cache to view @cache
         Blade::directive('cache', function ($expression) {
-            return "<?php if (Matriuska::setUP($expression)) { ?>";
+            return "<?php if ( ! App\Matriuska::setUP($expression)) { ?>";
             // return Matriuska::setUP($expression);
         });
 
-        Blade::directive('endcache', function ($expression) {
-            return "<?php if (Matriuska::tearDown($expression)) { ?>";
+        Blade::directive('endcache', function () {
+            return "<?php } echo App\Matriuska::tearDown() { ?>";
             // return Matriuska::tearDown($expression);
         });
     }
